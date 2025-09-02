@@ -1,0 +1,12 @@
+# Ignore raw data
+data/raw/*
+!data/raw/README.md
+
+# Ignore checkpoints and backups
+data/clean/*.parquet
+data/clean/backups/*
+*.db
+
+# Ignore system files
+__pycache__/
+*.DS_Store
