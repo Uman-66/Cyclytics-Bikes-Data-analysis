@@ -1,12 +1,26 @@
-# Ignore raw data
-data/raw/*
-!data/raw/README.md
+# === Data files ===
+# Ignore all raw trip CSV files
+data/raw/*.csv
 
-# Ignore checkpoints and backups
+# Ignore heavy processed files
 data/clean/*.parquet
-data/clean/backups/*
-*.db
+data/clean/*.db
+data/clean/*.sqlite
 
-# Ignore system files
+# Ignore backups
+data/clean/backups/
+
+# === Jupyter Notebook checkpoints ===
+.ipynb_checkpoints/
+
+# === System files ===
+.DS_Store
+Thumbs.db
+
+# === IDE/editor settings ===
+.pycharm/
+.idea/
+
+# === Python cache ===
 __pycache__/
-*.DS_Store
+*.pyc
