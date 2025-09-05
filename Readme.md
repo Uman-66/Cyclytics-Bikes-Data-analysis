@@ -1,101 +1,99 @@
-# Cyclistic Bike-Share Analysis: From Data to Strategy
+# Cyclistic Bike-Share Analysis
 
 ## 🎯 1. Business Task
 
-The primary goal of this analysis is to **identify and analyze the key behavioral differences** between Cyclistic's annual members and casual riders using the complete 2024 trip data. The insights derived will directly inform the marketing team's strategy to design targeted initiatives aimed at converting casual riders into profitable annual members.
+The goal of this analysis is to identify **how annual members and casual riders use Cyclistic bikes differently**. By analyzing behavioral patterns from the complete 2024 trip data, this project will provide actionable insights to guide the marketing team's strategy for converting casual riders into annual members, thereby driving future growth.
 
-**Final Task Statement:**
-> "To analyze how annual members and casual riders use Cyclistic bikes differently by examining their 2024 riding patterns to identify key behavioral differences for a targeted marketing strategy."
+**Key Questions to Explore:**
 
----
+* How do ride durations differ between members and casual riders?
+* What are the patterns in ride volume by day of the week and time of day for each group?
+* Which stations are most popular for casual riders, and how does this compare to members?
+* Does bike type (classic, docked, electric) preference vary between the two groups?
 
-## 👥 2. Key Stakeholders
+## 👥 2. Stakeholders
 
-- **Lily Moreno:** Director of Marketing (Primary stakeholder and project sponsor)
-- **Cyclistic Marketing Analytics Team:** Responsible for analysis and reporting
-- **Cyclistic Executive Team:** Will review and approve the final strategic recommendations
+* **Lily Moreno:** Director of Marketing (Primary stakeholder)
+* **Cyclistic Marketing Analytics Team**
+* **Cyclistic Executive Team** (Will approve the final strategy)
 
----
+## 📊 3. Data Source
 
-## 📁 3. Data Source and Description
+This analysis uses the most recent 12 months of Cyclistic trip data (Jan-Dec 2024).
 
-**Data Source:** [Divvy Trip Data](https://divvy-tripdata.s3.amazonaws.com/index.html) provided by Motivate International Inc.
+* **Source:** [Divvy Trip Data](https://divvy-tripdata.s3.amazonaws.com/index.html)
+* **License:** Data provided by Motivate International Inc. under this [license](https://ride.divvybikes.com/data-license-agreement).
+* **Privacy:** All personally identifiable information has been removed. Analysis focuses solely on aggregate behavioral patterns.
 
-**License:** This data is made available under the [Divvy Data License Agreement](https://ride.divvybikes.com/data-license-agreement).
-
-**Dataset Details:**
-- **Time Period:** January 2024 - December 2024 (12 months)
-- **Files Used:** 12 monthly ZIP files (`202401-divvy-tripdata.zip` to `202412-divvy-tripdata.zip`)
-- **Privacy Note:** All personally identifiable information has been removed in compliance with data privacy regulations.
-
----
-
-## 🗃️ 4. Repository Structure
-
-The project is organized as follows:
+## 🗂️ 4. Repository Structure
 
 ```
 cyclistic-bikeshare-analysis/
 │
-├── 📊 data/
-│   ├── 📂 raw/               # Original, immutable source data (12 CSV files)
-│   └── 📂 clean/             # Processed data (Parquet, SQLite DB)
+├── data/
+│   ├── raw/       # Original, unaltered source CSV files (12 files)
+│   └── clean/     # Processed data in Parquet format & SQL database
 │
-├── 📓 notebooks/             # Jupyter notebooks for analysis
+├── notebooks/     # Jupyter notebooks for the analysis process
 │   ├── 01_data_cleaning.ipynb
 │   ├── 02_sql_analysis.ipynb
 │   └── 03_visualization.ipynb
 │
-├── 🗃️ sql/                   # SQL query files for analysis
-│   ├── rides_by_month.sql
-│   ├── avg_ride_length.sql
-│   └── ...
+├── sql/           # Standalone SQL query files for analysis
 │
-├── 📈 outputs/
-│   ├── 📂 tables/            # Exported summary tables (CSV)
-│   └── 📂 figures/           # Exported visualizations (PNG)
+├── outputs/
+│   ├── tables/    # Exported summary tables (CSV)
+│   └── figures/   # Exported visualizations (PNG)
 │
-└── README.md                 # Project overview and documentation
+├── data_cleaning_log.md # Summary of data cleaning steps & changes
+└── README.md            # Project overview (this file)
 ```
-
----
 
 ## 🔧 5. Tools & Technologies
 
-- **Data Processing & Analysis:** Python (Pandas, NumPy), SQL
-- **Database Storage:** SQLite
-- **Visualization:** Python (Matplotlib, Seaborn), Tableau Public
-- **Version Control:** Git, GitHub
+* **Data Processing & Cleaning:** Python (Pandas, NumPy)
+* **Database & Analysis:** SQLite, SQL
+* **Visualization:** Python (Matplotlib, Seaborn), Tableau Public
+* **Version Control & Documentation:** Git, GitHub, Markdown
+
+## 🔄 6. Process
+
+The analysis will follow the six steps of the data analysis process: **Ask, Prepare, Process, Analyze, Share, and Act.**
+
+1. **Ask:** Define the business task and key questions. *(Complete)*
+2. **Prepare:** Identify and download data; set up the project structure. *(Complete)*
+3. **Process:** Clean and transform the data for analysis. This includes:
+
+   * Combining 12 monthly files into a single dataset.
+   * Calculating new columns (ride\_length, day\_of\_week, month, etc.).
+   * Filtering out invalid data (negative times, rides >24 hours).
+   * Documenting all cleaning steps in a log.
+   * Loading the clean data into an SQL database for analysis.
+4. **Analyze:** Use SQL and Python to perform exploratory data analysis (EDA) and identify trends.
+5. **Share:** Create visualizations and build a dashboard to communicate findings.
+6. **Act:** Provide top three data-driven recommendations for the marketing strategy.
 
 ---
+## 📊 7. Analysis & Key Findings
 
-## 🚀 Next Steps
+The analysis phase involved running targeted SQL queries on the cleaned database to answer the core business questions. The following key insights were uncovered:
 
-With the data downloaded and the repository structure in place, the next phase is:
-1.  **Data Processing:** Clean the raw CSVs, calculate new fields (`ride_length`, `day_of_week`, etc.), and load into an SQLite database.
-2.  **Analysis:** Perform exploratory data analysis (EDA) using SQL queries to uncover trends.
-3.  **Visualization:** Create compelling visualizations to communicate key insights.
-4.  **Recommendations:** Formulate three data-driven marketing strategies for presentation to the executive team.
+**1. Ride Duration:**
+- Casual riders take **70% longer** trips on average (20.9 minutes) compared to members (12.2 minutes), indicating a leisure-oriented usage pattern.
 
----
+**2. Weekly Patterns:**
+- **Members** show consistent, high usage throughout the **weekdays** (M-F), characteristic of commuting.
+- **Casual** ridership spikes significantly on **weekends** (Sat-Sun), confirming use for leisure activities.
 
-### What You've Accomplished So Far (You are right on track!):
+**3. Daily Patterns:**
+- Member traffic shows distinct **rush hour peaks** at 7-8 AM and 4-6 PM.
+- Casual ridership builds gradually, peaking in the **early afternoon** (2-4 PM).
 
-✅ **Defined the "Ask" Phase:** You have a clear business task and know your stakeholders.  
-✅ **Prepared the Data:** You've identified the source and downloaded the 12 files for 2024.  
-✅ **Set Up Project Structure:** You've created the folder paths.  
-✅ **Connected to GitHub:** Your local folder is linked to your remote repo.
+**4. Geographic Trends:**
+- The top 10 stations for casual riders are overwhelmingly concentrated around **Chicago's major tourist and recreational attractions** (e.g., Navy Pier, Millennium Park, Shedd Aquarium, Adler Planetarium).
 
-### What's Left for Day 1:
+**5. Bike Type Preference:**
+- While both groups use classic and electric bikes, **casual riders were the primary users of electric scooters**, suggesting a willingness to try new mobility options.
 
-1.  **Move the ZIP files:** Place the 12 downloaded `2024XX-divvy-tripdata.zip` files into your `/data/raw/` folder.
-2.  **Unzip them:** Extract all 12 CSV files into that same `/data/raw/` folder. You should have `202401-divvy-tripdata.csv`, `202402-divvy-tripdata.csv`, etc., in there.
-3.  **Create the README.md:** Copy the text above into a new file named `README.md` in your main project folder.
-4.  **Push to GitHub:** Add, commit, and push this new `README.md` file and your folder structure (with the raw data) to GitHub.
-
-You have done the most important part—the planning. Now you are perfectly set up to start the data processing on Day 2.
-## 📊 Key Analysis Questions
-1. How does average ride duration differ between members and casual riders?
-2. Are there peak usage times/days for each group?
-3. Which stations are most popular for casual riders?
-4. How does bike type (classic vs. electric) preference vary?
+*These findings were exported to CSV files for further visualization and are available in the `/outputs/tables/` directory.*
+*This project is part of the Google Data Analytics Professional Certificate. Cyclistic is a fictional company, but the data has been made available by Motivate International Inc.*

@@ -1,12 +1,12 @@
 
 # Data Cleaning Log
-- Date & Time: 2025-09-02 19:47:12
+- Date & Time: 2025-09-05 15:48:17
 - Initial Number of Rides: 5,860,568
-- Rides Removed (Negative Duration): 43
-- Rides Removed (>24 hours): 5,142
-- Final Number of Rides: 5,855,383
-- Percentage of Data Removed: 0.09%
+- Rides Removed (Negative Duration): 723
+- Rides Removed (>24 hours): 7,596
+- Final Number of Rides: 5,852,249
+- Percentage of Data Removed: 0.14%
 - **Output Files Created:**
   - `../data/clean/01_combined_raw.parquet`
   - `../data/clean/trips_clean.parquet`
-  - `./data/clean/backups/trips_clean_20250902_194705.parquet`
+  - `../data/clean/backups/trips_clean_20250905_154808.parquet`
