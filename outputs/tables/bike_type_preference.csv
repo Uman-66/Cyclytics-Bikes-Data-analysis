@@ -1,0 +1,7 @@
+rideable_type,user_type,number_of_rides
+classic_bike,casual,968778
+classic_bike,member,1759184
+electric_bike,casual,1091251
+electric_bike,member,1888699
+electric_scooter,casual,85215
+electric_scooter,member,59122
