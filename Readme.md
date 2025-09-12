@@ -1,4 +1,22 @@
 # Cyclistic Bike-Share Analysis
+📌 This project is available across platforms:  
+- [Interactive Tableau Dashboard](https://public.tableau.com/views/CyclisticBike-ShareAnalysis2024/CyclisticBike-ShareAnalysis2024?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)  
+- [Story-driven Kaggle Notebook](https://www.kaggle.com/code/rummanaslam/cyclistic-bike-share-from-data-to-strategy)  
+- [Full Code & Repo (GitHub)](https://github.com/Uman-66/Cyclytics-Bikes-Data-analysis)
+O
+## 📑 Table of Contents
+1. [Business Task](#-1-business-task)
+2. [Stakeholders](#-2-stakeholders)
+3. [Data Source](#-3-data-source)
+4. [Repository Structure](#-4-repository-structure)
+5. [Tools & Technologies](#-5-tools--technologies)
+6. [Process](#-6-process)
+7. [Analysis & Key Findings](#-7-analysis--key-findings)
+8. [Visualizations & Dashboard](#-8-visualizations--dashboard)
+9. [Strategic Recommendations](#-9-strategic-recommendations)
+11. [Kaggle Notebook](#-11-kaggle-notebook)
+
+
 
 ## 🎯 1. Business Task
 
@@ -39,7 +57,7 @@ cyclistic-bikeshare-analysis/
 │   ├── 02_sql_analysis.ipynb
 │   └── 03_visualization.ipynb
 │
-├── sql/           # Standalone SQL query files for analysis
+|
 │
 ├── outputs/
 │   ├── tables/    # Exported summary tables (CSV)
@@ -95,5 +113,51 @@ The analysis phase involved running targeted SQL queries on the cleaned database
 **5. Bike Type Preference:**
 - While both groups use classic and electric bikes, **casual riders were the primary users of electric scooters**, suggesting a willingness to try new mobility options.
 
+## 📈 8. Visualizations & Dashboard
+
+The analysis was translated into the following visualizations to drive strategic decision-making. Each chart is paired with its core business implication.
+
+**Key Visualizations:**
+
+1.  **Average Ride Duration by User Type**
+    *   **Insight:** Casual riders take 70% longer trips.
+    *   **Business Implication:** Their use case is leisure, not commute. Marketing should frame the annual membership as a key to unlimited exploration and savings on recreational rides.
+    *   ![](./outputs/figures/avg_duration_by_type.png)
+
+2.  **Rides by Day of the Week**
+    *   **Insight:** Member usage is consistent on weekdays; Casual usage spikes on weekends.
+    *   **Business Implication:** Digital ad campaigns and promotions targeting casual riders should be heavily concentrated from Thursday to Saturday to capture them when they are most active.
+    *   ![](./outputs/figures/rides_by_day.png)
+
+3.  **Top Start Stations for Casual Riders**
+    *   **Insight:** Usage is highly concentrated at tourist and recreational hubs.
+    *   **Business Implication:** This provides a crystal-clear targeting list for physical marketing efforts (on-bike signage, station posters, local partnerships) to achieve the highest possible conversion rate.
+    *   ![](./outputs/figures/top_casual_stations.png)
+   4. Interactive Tableau Dashboard
+
+   *    ![](./outputs/figures/tableau_dashboard_screenshot.png.png)
+
+    For a deeper exploration of the trends, view the live dashboard here:  
+[View on Tableau Public](https://public.tableau.com/views/CyclisticBike-ShareAnalysis2024/CyclisticBike-ShareAnalysis2024?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
+**Interactive Tableau Dashboard:**
+For a deeper exploration of the trends, an interactive dashboard was created.
+[![View the Interactive Dashboard on Tableau Public](https://img.shields.io/badge/Tableau-Public-orange?logo=tableau&style=for-the-badge)](https://public.tableau.com/app/profile/yourname/viz/YourDashboardName) <!-- REPLACE WITH YOUR LINK -->
+
+*All generated figures are available in the `/outputs/figures/` directory.*
 *These findings were exported to CSV files for further visualization and are available in the `/outputs/tables/` directory.*
 *This project is part of the Google Data Analytics Professional Certificate. Cyclistic is a fictional company, but the data has been made available by Motivate International Inc.*
+## ✅ 9. Strategic Recommendations
+
+Based on the analysis, the following targeted initiatives are recommended to convert casual riders into members:
+
+| Initiative | Supporting Insight | Action |
+| :--- | :--- | :--- |
+| **Tourist Hub Conversion** | Casual riders’ top stations are tourist attractions (e.g., Streeter Dr & Grand Ave, Millennium Park) | Place promotional kiosks/signage at these hotspots offering a “Weekender Pass” convertible into an annual membership |
+| **Targeted Digital Campaign** | Consistent casual ridership on Thu/Fri afternoons suggests commute intent | Run ads in Chicago business districts during these times with a free 1-week trial |
+| **E-Bike Loyalty Program** | Casual riders use e-bikes disproportionately compared to members | Launch an app feature: *“10 e-bike rides unlocks 25% off membership”* |
+## 🔗 11. Kaggle Notebook
+
+For a story-driven version of this analysis, I published a Kaggle notebook that walks through the problem, data prep, insights, and recommendations in a recruiter-friendly format:
+
+[![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-blue?logo=kaggle&style=for-the-badge)](https://www.kaggle.com/code/rummanaslam/cyclistic-bike-share-from-data-to-strategy)
