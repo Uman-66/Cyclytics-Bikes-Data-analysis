@@ -1,0 +1,15 @@
+day_of_week,user_type,number_of_rides
+Monday,casual,181642
+Monday,member,399232
+Tuesday,casual,162819
+Tuesday,member,421399
+Wednesday,casual,187342
+Wednesday,member,446866
+Thursday,casual,183059
+Thursday,member,414236
+Friday,casual,222616
+Friday,member,376718
+Saturday,casual,317804
+Saturday,member,332556
+Sunday,casual,266150
+Sunday,member,295509
