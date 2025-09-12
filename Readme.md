@@ -97,7 +97,7 @@ The analysis will follow the six steps of the data analysis process: **Ask, Prep
 The analysis phase involved running targeted SQL queries on the cleaned database to answer the core business questions. The following key insights were uncovered:
 
 **1. Ride Duration:**
-- Casual riders take **70% longer** trips on average (20.9 minutes) compared to members (12.2 minutes), indicating a leisure-oriented usage pattern.
+- Casual riders take **50% longer** trips on average (24 minutes) compared to members (12 minutes), indicating a leisure-oriented usage pattern.
 
 **2. Weekly Patterns:**
 - **Members** show consistent, high usage throughout the **weekdays** (M-F), characteristic of commuting.
@@ -110,9 +110,6 @@ The analysis phase involved running targeted SQL queries on the cleaned database
 **4. Geographic Trends:**
 - The top 10 stations for casual riders are overwhelmingly concentrated around **Chicago's major tourist and recreational attractions** (e.g., Navy Pier, Millennium Park, Shedd Aquarium, Adler Planetarium).
 
-**5. Bike Type Preference:**
-- While both groups use classic and electric bikes, **casual riders were the primary users of electric scooters**, suggesting a willingness to try new mobility options.
-
 ## 📈 8. Visualizations & Dashboard
 
 The analysis was translated into the following visualizations to drive strategic decision-making. Each chart is paired with its core business implication.
@@ -120,7 +117,7 @@ The analysis was translated into the following visualizations to drive strategic
 **Key Visualizations:**
 
 1.  **Average Ride Duration by User Type**
-    *   **Insight:** Casual riders take 70% longer trips.
+    *   **Insight:** Casual riders take 50% longer trips.
     *   **Business Implication:** Their use case is leisure, not commute. Marketing should frame the annual membership as a key to unlimited exploration and savings on recreational rides.
     *   ![](./outputs/figures/avg_duration_by_type.png)
 
